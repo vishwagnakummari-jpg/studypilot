@@ -1,0 +1,55 @@
+[
+  {
+    "subject": "Data Structures & Algorithms",
+    "chapters": [
+      "Introduction to Algorithms",
+      "Asymptotic Analysis (Big-O, Big-Theta, Big-Omega)",
+      "Recursion and Recurrence Relations"
+    ],
+    "exam_date": "2026-09-10",
+    "weightage": "15%"
+  },
+  {
+    "subject": "Data Structures & Algorithms",
+    "chapters": [
+      "Arrays",
+      "Linked Lists",
+      "Stacks",
+      "Queues"
+    ],
+    "exam_date": "2026-09-24",
+    "weightage": "20%"
+  },
+  {
+    "subject": "Data Structures & Algorithms",
+    "chapters": [
+      "Binary Trees",
+      "Binary Search Trees",
+      "Heap",
+      "Trie"
+    ],
+    "exam_date": "2026-10-15",
+    "weightage": "25%"
+  },
+  {
+    "subject": "Data Structures & Algorithms",
+    "chapters": [
+      "Graph Representation",
+      "BFS",
+      "DFS",
+      "Shortest Paths"
+    ],
+    "exam_date": "2026-11-05",
+    "weightage": "20%"
+  },
+  {
+    "subject": "Data Structures & Algorithms",
+    "chapters": [
+      "Greedy Algorithms",
+      "Dynamic Programming",
+      "Backtracking"
+    ],
+    "exam_date": "2026-11-26",
+    "weightage": "20%"
+  }
+]
