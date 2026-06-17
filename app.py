@@ -47,13 +47,19 @@ if st.button("🚀 Generate Plan"):
 
      st.write("STEP 2")
 
-     raw_text = extract_text_from_pdf(tmp_path)
+try:
+    raw_text = extract_text_from_pdf(tmp_path)
+    st.write("STEP 3")
+except Exception as e:
+    st.error(f"PDF Error: {e}")
+    st.stop()
 
-     st.write("STEP 3")
-
-     raw_syllabus = extract_syllabus(raw_text)
-
-     st.write("STEP 4")
+try:
+    raw_syllabus = extract_syllabus(raw_text)
+    st.write("STEP 4")
+except Exception as e:
+    st.error(f"Syllabus Error: {e}")
+    st.stop()
     
 
     cleaned = raw_syllabus.strip()
