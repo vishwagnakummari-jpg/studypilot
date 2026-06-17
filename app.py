@@ -36,26 +36,35 @@ if st.button("🚀 Generate Plan"):
     if not uploaded_file:
         st.error("Please upload a syllabus PDF file")
         st.stop()
-
+        
     with st.spinner("Reading your syllabus..."):
 
-        # Save uploaded PDF to a temporary file
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
-            tmp.write(uploaded_file.read())
-            tmp_path = tmp.name
+     st.write("STEP 1")
 
-        raw_text = extract_text_from_pdf(tmp_path)
-        raw_syllabus = extract_syllabus(raw_text)
+     with tempfile.NamedTemporaryFile(delete=False) as tmp:
+        tmp.write(uploaded_file.read())
+        tmp_path = tmp.name
 
-        cleaned = raw_syllabus.strip()
+     st.write("STEP 2")
 
-        if "```" in cleaned:
+     raw_text = extract_text_from_pdf(tmp_path)
+
+     st.write("STEP 3")
+
+     raw_syllabus = extract_syllabus(raw_text)
+
+     st.write("STEP 4")
+    
+
+    cleaned = raw_syllabus.strip()
+
+    if "```" in cleaned:
             cleaned = cleaned.split("```")[1]
 
             if cleaned.startswith("json"):
                 cleaned = cleaned[4:]
 
-        syllabus = json.loads(cleaned.strip())
+    syllabus = json.loads(cleaned.strip())
     
     with st.spinner("Building your 7 days plan..."):
         allocated_hours = allocate_hours(
