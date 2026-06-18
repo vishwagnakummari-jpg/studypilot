@@ -77,7 +77,7 @@ def main():
         json.dump(data, f, indent=2)
     print("Json has been written properly")
 
-#if __name__ == "__main__":
-   # main()
+if __name__ == "__main__":
+    main()
     
       
