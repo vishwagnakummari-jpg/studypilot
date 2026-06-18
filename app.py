@@ -1,10 +1,11 @@
 import streamlit as st
 import json, os, tempfile
-
+from dotenv import load_dotenv
 from extract import extract_syllabus, extract_text_from_pdf
 from planner import allocate_hours, generate_weekly_plan, clean_json_response
 from pdf_export import generate_pdf, load_timetable
-#from reminder import send_daily_nudge
+load_dotenv()
+from remainder import send_daily_nudge
 
 st.set_page_config(
     page_title="Study Pilot",
@@ -22,7 +23,8 @@ uploaded_file = st.file_uploader(
 )
 
 email = st.text_input(
-    "Your email (for daily nudge)"
+    "Your email (for daily nudge)",
+    value=os.getenv("RECEIVER_EMAIL", "")
 )
 
 hours = st.slider(
@@ -41,25 +43,26 @@ if st.button("🚀 Generate Plan"):
 
      st.write("STEP 1")
 
-     with tempfile.NamedTemporaryFile(delete=False) as tmp:
+    with tempfile.NamedTemporaryFile(delete=False) as tmp:
         tmp.write(uploaded_file.read())
         tmp_path = tmp.name
+        st.write("TMP PATH =", tmp_path)
 
-     st.write("STEP 2")
+    st.write("STEP 2")
 
-try:
-    raw_text = extract_text_from_pdf(tmp_path)
-    st.write("STEP 3")
-except Exception as e:
-    st.error(f"PDF Error: {e}")
-    st.stop()
+    try:
+        raw_text = extract_text_from_pdf(tmp_path)
+        st.write("STEP 3")
+    except Exception as e:
+        st.error(f"PDF Error: {e}")
+        st.stop()
 
-try:
-    raw_syllabus = extract_syllabus(raw_text)
-    st.write("STEP 4")
-except Exception as e:
-    st.error(f"Syllabus Error: {e}")
-    st.stop()
+    try:
+        raw_syllabus = extract_syllabus(raw_text)
+        st.write("STEP 4")
+    except Exception as e:
+        st.error(f"Syllabus Error: {e}")
+        st.stop()    
     
 
     cleaned = raw_syllabus.strip()
@@ -147,15 +150,23 @@ with open("my_timetable.pdf", "rb") as f:
         
     )
     
-
     if email:
       try:
-        send_daily_nudge(rows, recipient=email)
+        rows, summary = load_timetable("timetable.json")
+
+        send_daily_nudge(
+            rows=rows,
+            recipient_email=email
+        )
+
         st.success(f"Daily nudge sent to {email}")
+
       except Exception as e:
-        st.warning(f"Couldn't send the email {e}")
+        st.warning(f"Couldn't send the email: {e}")
+
     else:
      st.info("Please add the email to get notification")
+
      
     
             

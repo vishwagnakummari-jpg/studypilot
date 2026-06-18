@@ -4,6 +4,7 @@ import json
 from groq import Groq
 from dotenv import load_dotenv
 load_dotenv(dotenv_path=".env")
+load_dotenv()
 print("API Key =", os.getenv("GROQ_API_KEY"))
 
 
@@ -23,41 +24,36 @@ client= Groq(
     )
 
 def extract_syllabus(text):
-    prompt=f"""
-            You are a structured data explorer.
-            Extract Only syllabus unit.
-            Ecah unit should become one JSON object.
 
-            DO NOT create a separate object for the list of all units.
-            DO NOT treat unit names as chapters.
-            The chapters field should contain onlt the topics listed under thet unit.
+    prompt = f"""
+    Your prompt here...
 
-          
+    Syllabus text:
 
-            Return ONLY valid JSON.
+    {text}
+    """
 
-            Schema:
-          
-            [
-            {{
-                "subject": "string",
-                "chapters": ["..."],
-                "exam_date": "YYYY-MM-DD" or null",
-                "weightage": "%|null"
-            }}
-            ]
+    try:
+        print("BEFORE GROQ")
 
-            Syllbus text:
+        response = client.chat.completions.create(
+            model="llama-3.1-8b-instant",
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ],
+            temperature=0.1,
+            max_tokens=4000
+        )
 
-            {text}
-        """
-    response = client.chat.completions.create(
-                    model="llama-3.1-8b-instant",
-                    messages=[{"role":"user","content": prompt}],
-                    temperature=0.1,
-                    max_tokens=4000
-                             
-                )
+        print("AFTER GROQ")
+
+    except Exception as e:
+        print("GROQ ERROR:", str(e))
+        raise
+
     return response.choices[0].message.content
 
 
