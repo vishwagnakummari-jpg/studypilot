@@ -5,23 +5,27 @@ from groq import Groq
 from dotenv import load_dotenv
 load_dotenv(dotenv_path=".env")
 load_dotenv()
-print("API Key =", os.getenv("GROQ_API_KEY"))
-
+#print("API Key =", os.getenv("GROQ_API_KEY"))
 
 def extract_text_from_pdf(pdf_path):
-    text=""
+    text = ""
+
     with pdfplumber.open(pdf_path) as pdf:
         for page in pdf.pages:
-            page_text=page.extract_text()
+            page_text = page.extract_text()
+
             if page_text:
                 text += page_text + "\n"
-    return text 
+
+    return text
 
 
 load_dotenv()
-client= Groq(
+
+client = Groq(
     api_key=os.getenv("GROQ_API_KEY")
-    )
+)
+
 
 def extract_syllabus(text):
 
@@ -33,9 +37,9 @@ def extract_syllabus(text):
     {text}
     """
 
-    try:
-        print("BEFORE GROQ")
+    print("BEFORE GROQ")
 
+    try:
         response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[
@@ -54,8 +58,7 @@ def extract_syllabus(text):
         print("GROQ ERROR:", str(e))
         raise
 
-    return response.choices[0].message.content
-
+    return response.choices[0].message.content   
 
 def clean_json_response(raw):
     start = raw.find("[")
