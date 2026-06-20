@@ -2,32 +2,13 @@
   "timetable": [
     {
       "day": 1,
-      "date": "2026-06-19",
+      "date": "2026-06-21",
       "slots": [
         {
           "subject": "Data Structures & Algorithms",
           "duration_minutes": 65,
           "chapters_to_cover": [
-            "Introduction to Algorithms",
-            "Asymptotic Analysis (Big-O, Big-Theta, Big-Omega)",
-            "Recursion and Recurrence Relations"
-          ],
-          "notes": ""
-        }
-      ],
-      "total_study_minutes": 65
-    },
-    {
-      "day": 2,
-      "date": "2026-06-20",
-      "slots": [
-        {
-          "subject": "Data Structures & Algorithms",
-          "duration_minutes": 65,
-          "chapters_to_cover": [
-            "Introduction to Algorithms",
-            "Asymptotic Analysis (Big-O, Big-Theta, Big-Omega)",
-            "Recursion and Recurrence Relations"
+            "Introduction to Algorithms"
           ],
           "notes": ""
         },
@@ -35,10 +16,7 @@
           "subject": "Data Structures & Algorithms",
           "duration_minutes": 56,
           "chapters_to_cover": [
-            "Arrays",
-            "Linked Lists",
-            "Stacks",
-            "Queues"
+            "Asymptotic Analysis (Big-O, Big-Theta, Big-Omega)"
           ],
           "notes": ""
         }
@@ -46,77 +24,14 @@
       "total_study_minutes": 121
     },
     {
-      "day": 3,
-      "date": "2026-06-21",
-      "slots": [
-        {
-          "subject": "Data Structures & Algorithms",
-          "duration_minutes": 65,
-          "chapters_to_cover": [
-            "Introduction to Algorithms",
-            "Asymptotic Analysis (Big-O, Big-Theta, Big-Omega)",
-            "Recursion and Recurrence Relations"
-          ],
-          "notes": ""
-        },
-        {
-          "subject": "Data Structures & Algorithms",
-          "duration_minutes": 56,
-          "chapters_to_cover": [
-            "Arrays",
-            "Linked Lists",
-            "Stacks",
-            "Queues"
-          ],
-          "notes": ""
-        },
-        {
-          "subject": "Data Structures & Algorithms",
-          "duration_minutes": 46,
-          "chapters_to_cover": [
-            "Binary Trees",
-            "Binary Search Trees",
-            "Heap",
-            "Trie"
-          ],
-          "notes": ""
-        }
-      ],
-      "total_study_minutes": 167
-    },
-    {
-      "day": 4,
+      "day": 2,
       "date": "2026-06-22",
       "slots": [
         {
           "subject": "Data Structures & Algorithms",
-          "duration_minutes": 65,
-          "chapters_to_cover": [
-            "Introduction to Algorithms",
-            "Asymptotic Analysis (Big-O, Big-Theta, Big-Omega)",
-            "Recursion and Recurrence Relations"
-          ],
-          "notes": ""
-        },
-        {
-          "subject": "Data Structures & Algorithms",
-          "duration_minutes": 56,
-          "chapters_to_cover": [
-            "Arrays",
-            "Linked Lists",
-            "Stacks",
-            "Queues"
-          ],
-          "notes": ""
-        },
-        {
-          "subject": "Data Structures & Algorithms",
           "duration_minutes": 46,
           "chapters_to_cover": [
-            "Binary Trees",
-            "Binary Search Trees",
-            "Heap",
-            "Trie"
+            "Recursion and Recurrence Relations"
           ],
           "notes": ""
         },
@@ -124,27 +39,22 @@
           "subject": "Data Structures & Algorithms",
           "duration_minutes": 39,
           "chapters_to_cover": [
-            "Graph Representation",
-            "BFS",
-            "DFS",
-            "Shortest Paths"
+            "Arrays"
           ],
           "notes": ""
         }
       ],
-      "total_study_minutes": 206
+      "total_study_minutes": 85
     },
     {
-      "day": 5,
+      "day": 3,
       "date": "2026-06-23",
       "slots": [
         {
           "subject": "Data Structures & Algorithms",
-          "duration_minutes": 65,
+          "duration_minutes": 34,
           "chapters_to_cover": [
-            "Introduction to Algorithms",
-            "Asymptotic Analysis (Big-O, Big-Theta, Big-Omega)",
-            "Recursion and Recurrence Relations"
+            "Linked Lists"
           ],
           "notes": ""
         },
@@ -152,70 +62,22 @@
           "subject": "Data Structures & Algorithms",
           "duration_minutes": 56,
           "chapters_to_cover": [
-            "Arrays",
-            "Linked Lists",
-            "Stacks",
-            "Queues"
-          ],
-          "notes": ""
-        },
-        {
-          "subject": "Data Structures & Algorithms",
-          "duration_minutes": 46,
-          "chapters_to_cover": [
-            "Binary Trees",
-            "Binary Search Trees",
-            "Heap",
-            "Trie"
-          ],
-          "notes": ""
-        },
-        {
-          "subject": "Data Structures & Algorithms",
-          "duration_minutes": 39,
-          "chapters_to_cover": [
-            "Graph Representation",
-            "BFS",
-            "DFS",
-            "Shortest Paths"
-          ],
-          "notes": ""
-        },
-        {
-          "subject": "Data Structures & Algorithms",
-          "duration_minutes": 34,
-          "chapters_to_cover": [
-            "Greedy Algorithms",
-            "Dynamic Programming",
-            "Backtracking"
+            "Stacks, Queues"
           ],
           "notes": ""
         }
       ],
-      "total_study_minutes": 240
+      "total_study_minutes": 90
     },
     {
-      "day": 6,
+      "day": 4,
       "date": "2026-06-24",
       "slots": [
         {
           "subject": "Data Structures & Algorithms",
-          "duration_minutes": 65,
+          "duration_minutes": 39,
           "chapters_to_cover": [
-            "Introduction to Algorithms",
-            "Asymptotic Analysis (Big-O, Big-Theta, Big-Omega)",
             "Recursion and Recurrence Relations"
-          ],
-          "notes": ""
-        },
-        {
-          "subject": "Data Structures & Algorithms",
-          "duration_minutes": 56,
-          "chapters_to_cover": [
-            "Arrays",
-            "Linked Lists",
-            "Stacks",
-            "Queues"
           ],
           "notes": ""
         },
@@ -223,21 +85,22 @@
           "subject": "Data Structures & Algorithms",
           "duration_minutes": 46,
           "chapters_to_cover": [
-            "Binary Trees",
-            "Binary Search Trees",
-            "Heap",
-            "Trie"
+            "Binary Trees"
           ],
           "notes": ""
-        },
+        }
+      ],
+      "total_study_minutes": 85
+    },
+    {
+      "day": 5,
+      "date": "2026-06-25",
+      "slots": [
         {
           "subject": "Data Structures & Algorithms",
-          "duration_minutes": 39,
+          "duration_minutes": 56,
           "chapters_to_cover": [
-            "Graph Representation",
-            "BFS",
-            "DFS",
-            "Shortest Paths"
+            "Binary Search Trees"
           ],
           "notes": ""
         },
@@ -245,36 +108,22 @@
           "subject": "Data Structures & Algorithms",
           "duration_minutes": 34,
           "chapters_to_cover": [
-            "Greedy Algorithms",
-            "Dynamic Programming",
-            "Backtracking"
+            "Heap"
           ],
           "notes": ""
-        },
-        {
-          "subject": "Data Structures & Algorithms",
-          "duration_minutes": 30,
-          "chapters_to_cover": [
-            "Introduction to Algorithms",
-            "Asymptotic Analysis (Big-O, Big-Theta, Big-Omega)",
-            "Recursion and Recurrence Relations"
-          ],
-          "notes": "Revision"
         }
       ],
-      "total_study_minutes": 270
+      "total_study_minutes": 90
     },
     {
-      "day": 7,
-      "date": "2026-06-25",
+      "day": 6,
+      "date": "2026-06-26",
       "slots": [
         {
           "subject": "Data Structures & Algorithms",
           "duration_minutes": 65,
           "chapters_to_cover": [
-            "Introduction to Algorithms",
-            "Asymptotic Analysis (Big-O, Big-Theta, Big-Omega)",
-            "Recursion and Recurrence Relations"
+            "Trie"
           ],
           "notes": ""
         },
@@ -282,42 +131,22 @@
           "subject": "Data Structures & Algorithms",
           "duration_minutes": 56,
           "chapters_to_cover": [
-            "Arrays",
-            "Linked Lists",
-            "Stacks",
-            "Queues"
+            "Graph Representation"
           ],
           "notes": ""
-        },
+        }
+      ],
+      "total_study_minutes": 121
+    },
+    {
+      "day": 7,
+      "date": "2026-06-27",
+      "slots": [
         {
           "subject": "Data Structures & Algorithms",
-          "duration_minutes": 46,
+          "duration_minutes": 30,
           "chapters_to_cover": [
-            "Binary Trees",
-            "Binary Search Trees",
-            "Heap",
-            "Trie"
-          ],
-          "notes": ""
-        },
-        {
-          "subject": "Data Structures & Algorithms",
-          "duration_minutes": 39,
-          "chapters_to_cover": [
-            "Graph Representation",
-            "BFS",
-            "DFS",
-            "Shortest Paths"
-          ],
-          "notes": ""
-        },
-        {
-          "subject": "Data Structures & Algorithms",
-          "duration_minutes": 34,
-          "chapters_to_cover": [
-            "Greedy Algorithms",
-            "Dynamic Programming",
-            "Backtracking"
+            "BFS, DFS, Shortest Paths"
           ],
           "notes": ""
         },
@@ -325,15 +154,13 @@
           "subject": "Data Structures & Algorithms",
           "duration_minutes": 30,
           "chapters_to_cover": [
-            "Introduction to Algorithms",
-            "Asymptotic Analysis (Big-O, Big-Theta, Big-Omega)",
-            "Recursion and Recurrence Relations"
+            "Greedy Algorithms, Dynamic Programming, Backtracking"
           ],
-          "notes": "Revision"
+          "notes": ""
         }
       ],
-      "total_study_minutes": 270
+      "total_study_minutes": 60
     }
   ],
-  "weekly_summary": "Study plan for Data Structures & Algorithms with 4 hours of study per day, 7 days a week."
+  "weekly_summary": "Data Structures & Algorithms study plan for 7 days, with 4 hours of study per day, and 30 minutes of revision on weekends."
 }

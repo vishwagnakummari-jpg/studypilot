@@ -57,12 +57,17 @@ if st.button("🚀 Generate Plan"):
         st.error(f"PDF Error: {e}")
         st.stop()
 
+    st.write("Before extract_syllabus")
+
     try:
         raw_syllabus = extract_syllabus(raw_text)
+
+        st.write("After extract_syllabus")
         st.write("STEP 4")
+
     except Exception as e:
-        st.error(f"Syllabus Error: {e}")
-        st.stop()    
+        st.error(f"Syllabus Error: {str(e)}")
+        st.stop()   
     
 
     cleaned = raw_syllabus.strip()
@@ -73,7 +78,13 @@ if st.button("🚀 Generate Plan"):
             if cleaned.startswith("json"):
                 cleaned = cleaned[4:]
 
-    syllabus = json.loads(cleaned.strip())
+    try:
+      syllabus = json.loads(cleaned.strip())
+    except Exception as e:
+     st.error(f"Syllabus JSON Error: {e}")
+     st.write("RAW SYLLABUS RESPONSE:")
+     st.write(cleaned)
+     st.stop()
     
     with st.spinner("Building your 7 days plan..."):
         allocated_hours = allocate_hours(
@@ -101,7 +112,13 @@ if st.button("🚀 Generate Plan"):
     cleaned_timetable = cleaned_timetable[start:end + 1]
     
 
-    timetable_data = json.loads(cleaned_timetable)
+    try:
+      timetable_data = json.loads(cleaned_timetable)
+    except Exception as e:
+     st.error(f"Timetable JSON Error: {e}")
+     st.write("RAW TIMETABLE RESPONSE:")
+     st.write(cleaned_timetable)
+     st.stop()
 
     st.write(raw_timetable)
     
